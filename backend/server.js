@@ -7,6 +7,5 @@ cloudinary.v2.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server listening on port 5173`);
-});
+const PORT = process.env.PORT || 5000;  // use Render ka dynamic port
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
